@@ -17,10 +17,10 @@ function App() {
       fetch(`https://api.themoviedb.org/3/search/movie?api_key=bfafa2d3c4889019446136dd50acf0f4&language=
              en-US&query=${searchText}&page=1&include_adult=false`)
         .then((response) => response.json())
-        .then((data ) => {
-          console.log(data.results)
-          setSearchResult(data.results)
-          });
+        .then((data) => {
+          console.log(data.results);
+          setSearchResult(data.results);
+        });
     }
   }, [searchText]);
 
@@ -38,7 +38,7 @@ function App() {
             <SearchView keyword={searchText} searchResults={searchResults} />
           }
         />
-        <Route path="/movie/:id" element={<MovieView />} />
+        <Route path="/movies/:id" element={<MovieView />} />
       </Routes>
     </div>
   );

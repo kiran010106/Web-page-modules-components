@@ -1,14 +1,13 @@
-import React from "react"; 
-import { useNavigate , Link,  } from "react-router-dom";
+import React from "react";
+import { useNavigate, Link } from "react-router-dom";
 
-const Navbar = ({searchText , setSearchText}) => {
-  const Navigate = useNavigate()
-
+const Navbar = ({ searchText, setSearchText }) => {
+  const Navigate = useNavigate();
 
   const updateSearchText = (e) => {
-      Navigate('/search')
-      setSearchText(e.target.value)    
-  } 
+    Navigate("/search");
+    setSearchText(e.target.value);
+  };
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -30,7 +29,11 @@ const Navbar = ({searchText , setSearchText}) => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/search">
+              <Link
+                className="nav-link active"
+                aria-current="page"
+                to="/search"
+              >
                 Home
               </Link>
             </li>
